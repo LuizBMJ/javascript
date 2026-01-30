@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é estrangeiro ou não?</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Veja" onclick="nacionalidade()">
+    <div>
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        function nacionalidade() {
+            var textpais = document.getElementById('pais')
+            var msg = document.querySelector('p#msg')
+            var pais = textpais.value
+
+            if (pais == 'brasil') {
+                msg.innerHTML = `<p> Você é brasileiro! </p>`
+            }
+
+            else {
+                msg.innerHTML = `<p> Você é estrangeiro! </p>`
+            }
+        }
+        
+    </script>
+</body>
+</html>
